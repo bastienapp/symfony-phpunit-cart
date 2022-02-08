@@ -11,7 +11,7 @@
         <li>
             <h3>Product: {{ item.product.name }}</h3>
             <div>Quantity: {{ item.quantity }}</div>
-            <div>Total: {{ cartManager.getCartItemTotal(item) }}</div>
+            <div>Total: {{ cartManager.getCartItemTotal(item)|format_currency('EUR', locale='fr') }}</div>
         </li>
     {% endfor %}
     </ul>
